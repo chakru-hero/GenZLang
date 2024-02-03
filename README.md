@@ -28,7 +28,7 @@ Maybe next version will be capable of printing 420.
 ## Usage/Examples
 
 ```Bash
-$ go build -o ~/.genzc.gz main.go
+$ go build -o ~/.genzc/gz main.go
 
 - Add path /home/<user>/.genzc to env variables.
 
