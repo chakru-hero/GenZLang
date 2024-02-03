@@ -5,11 +5,6 @@ import (
 	"unicode"
 	"bytes"
 )
-//type TokenType struct {
-//	int_lit string := "int_lit",
-//	_return string := "return",
-//	semi string := "semi"
-//}
 type Token struct{
 	TokenType string;
 	value string;
