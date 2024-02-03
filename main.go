@@ -1,6 +1,7 @@
 package main
 import (
 	"os"
+	 exec"os/exec"
 	"fmt"
 	"unicode"
 	"bytes"
@@ -90,6 +91,11 @@ func main (){
 	file, err := os.Create("out.asm");
 	check(err);
 	file.Write([]byte(token_to_asm(tokens)));
+	exec.Command("nasm", "-felf64", "out.asm").Run();
+	check(err)
+	exec.Command("ld" , "-o", "out", "out.o").Run();
+	exec.Command("rm", "out.asm").Run();
+	exec.Command("rm", "out.o").Run();
 	os.Exit(0);
 
 
