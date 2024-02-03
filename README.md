@@ -32,10 +32,6 @@ $ go build -o gz main.go
 
 $./gz <filename.genz>
 
-$ nasm -felf64 out.asm
-
-$ ld -o out out.o
-
 $ ./out
 
 $ echo $?
