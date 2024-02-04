@@ -1,7 +1,7 @@
 package main
 import (
 	"os"
-	 exec"os/exec"
+	exec"os/exec"
 	"fmt"
 	"unicode"
 	"bytes"
@@ -63,7 +63,7 @@ func tokenize(str string) []Token {
 func token_to_asm(tokens []Token) string{
 	var output string = "global _start\n_start:\n";
 	for i:=0;i<len(tokens);i++{
-		 token := tokens[i];
+		token := tokens[i];
 		if token.TokenType == "return" {
 			if i+1 < len(tokens) && tokens[i+1].TokenType == "int_lit" {
 				if i+2 < len(tokens) && tokens[i+2].TokenType == "semi" {
